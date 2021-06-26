@@ -1,6 +1,6 @@
 import './App.css';
 import XLSX from 'xlsx';
-import { make_cols } from './MakeColumns';
+
 import { SheetJSFT } from './types';
 import { useState } from 'react';
 
@@ -19,11 +19,12 @@ function App() {
   //   // }
   // }
 
-  function handleFile() {
+  function handleFile(ex) {
     const bb = document.querySelector('input').files[0];
     console.log(bb);
+    const files =ex.target.files;
     
-      setFile(document.querySelector('input').files[0]);
+      setFile(files[0]);
     
    // console.log(Files[0]);
     /* Boilerplate to set up FileReader */
